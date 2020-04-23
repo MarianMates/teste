@@ -22,8 +22,8 @@
     "require-dev": {
         "magento/marketplace-eqp": "^1.0.0"
     },
-    "type": "magento2-module",
-    "version": "2.0.0-beta5",
+    "type": "git",
+    "version": "1.0.0",
     "license": [
         "MIT"
     ],

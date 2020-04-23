@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <gdpr>
+            <general>
+                <enabled>0</enabled>
+                <page_id>privacy-policy-cookie-restriction-mode</page_id>
+            </general>
+            <erasure>
+                <enabled>0</enabled>
+                <strategy>anonymize</strategy>
+                <time_lapse>3600</time_lapse>
+                <schedule>* * * * *</schedule>
+                <remove_customer>1</remove_customer>
+                <components>customer_address,subscriber</components>
+            </erasure>
+            <export>
+                <enabled>0</enabled>
+                <renderer>html</renderer>
+                <customer_attributes>prefix,firstname,middlename,lastname,suffix,email,dob,gender,taxvat</customer_attributes>
+                <customer_address_attributes>prefix,firstname,middlename,lastname,suffix,company,street,city,country_id,province,postcode,fax,telephone,vat_id</customer_address_attributes>
+            </export>
+        </gdpr>
+    </default>
+</config>
